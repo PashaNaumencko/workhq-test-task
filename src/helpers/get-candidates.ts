@@ -1,20 +1,21 @@
 type Candidate = {
+  id: number;
   firstName: string;
-    lastName: string;
-    location: string;
-    workHistory: WorkHistory[]
+  lastName: string;
+  location: string;
+  workHistory: WorkHistory[]
 }
 
 type WorkHistory = {
-    company: string;
-    title: string;
-    startDate: string;
-    endDate: string;
-
+  company: string;
+  title: string;
+  startDate: string;
+  endDate: string;
 }
 
 const data = [
   {
+    "id": 1,
     "firstName": "Alice",
     "lastName": "Johnson",
     "location": "New York, NY",
@@ -34,6 +35,7 @@ const data = [
     ]
   },
   {
+    "id": 2,
     "firstName": "Bob",
     "lastName": "Smith",
     "location": "San Francisco, CA",
@@ -53,6 +55,7 @@ const data = [
     ]
   },
   {
+    "id": 3,
     "firstName": "Carol",
     "lastName": "Davis",
     "location": "Austin, TX",
@@ -72,6 +75,7 @@ const data = [
     ]
   },
   {
+    "id": 4,
     "firstName": "David",
     "lastName": "Wilson",
     "location": "Seattle, WA",
@@ -91,6 +95,7 @@ const data = [
     ]
   },
   {
+    "id": 5,
     "firstName": "Eva",
     "lastName": "Brown",
     "location": "Chicago, IL",
@@ -110,6 +115,7 @@ const data = [
     ]
   },
   {
+    "id": 6,
     "firstName": "Frank",
     "lastName": "Miller",
     "location": "Boston, MA",
@@ -129,6 +135,7 @@ const data = [
     ]
   },
   {
+    "id": 7,
     "firstName": "Grace",
     "lastName": "Harris",
     "location": "Denver, CO",
@@ -149,7 +156,7 @@ const data = [
   }
 ]
 
-function getCandidates(searchQuery: string): Promise<Candidate[]> {
+function getCandidates(searchQuery?: string): Promise<Candidate[]> {
   return new Promise((resolve) => {
     
     setTimeout(() => {
